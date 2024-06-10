@@ -1,0 +1,78 @@
+/* styles.css */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .container {
+    max-width: 600px;
+    margin: 20px auto;
+    background-color: #ffffff; /* Fondo blanco para el contenedor principal */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  h1 {
+    text-align: center;
+    color: #333;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  label {
+    margin-bottom: 8px;
+  }
+  
+  input[type="number"],
+  input[type="text"],
+  button {
+    padding: 8px;
+    margin-bottom: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+
+  html {
+    --s: 17px; /* control the size*/
+    --c1: #c19f9f;
+    --c2: #3e527a;
+    --c3: #727c7e;
+    
+    --g1: conic-gradient(at calc(250%/3) calc(50%/3),var(--c2) 60deg,#0000 0 300deg,var(--c1) 0);
+    --g2: conic-gradient(at calc(50%/3) 50%,#0000 75%,var(--c1) 0);
+    --g3: conic-gradient(at calc(100%/3) 50%,#0000 75%,var(--c2) 0);
+    --g4: conic-gradient(from 59deg at calc(200%/3) calc(249%/9),var(--c3) 61deg,#0000 62deg);
+    --g5: conic-gradient(from 60deg at 50% calc(250%/3),#f1f1f1 /*4th color*/ 60deg,var(--c1) 0 120deg,#0000 0);
+    --_p: calc(9*tan(30deg)*var(--s));
+    background:
+      var(--g1) calc(-1*var(--s)) 0,var(--g1) calc(2*var(--s)) var(--_p),
+      var(--g2),var(--g2) calc(3*var(--s)) var(--_p),
+      var(--g3),var(--g3) calc(3*var(--s)) var(--_p),
+      var(--g4),var(--g4) calc(3*var(--s)) var(--_p),
+      var(--g5) calc(3*var(--s)) 0,var(--g5) 0 var(--_p) var(--c3);
+    background-size: calc(6*var(--s)) calc(2*var(--_p))
+  }
+  
+  button {
+    background-color: #ff0000;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #45a049;
+  }
+  
+  #error {
+    color: red;
+    font-weight: bold;
+  }
+  
